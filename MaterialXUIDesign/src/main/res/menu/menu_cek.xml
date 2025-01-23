@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_cek"
+        android:icon="@drawable/ic_assignment"
+        android:orderInCategory="100"
+        android:title="Cek Approval"
+        app:showAsAction="ifRoom|withText" />
+
+</menu>

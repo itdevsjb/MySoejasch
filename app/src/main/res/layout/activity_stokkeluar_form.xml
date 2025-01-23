@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Konten Utama -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:contentInsetStartWithNavigation="0dp"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:subtitleTextAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                    app:subtitleTextColor="@color/grey_10"
+                    app:title="Hi, User" />
+
+            </RelativeLayout>
+
+
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:fillViewport="true"
+                android:scrollbars="none"
+                android:scrollingCache="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+
+
+                    <TextView
+                        android:id="@+id/tvUcodeGdg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="Gudang"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerGudang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_round_bg_outline"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="10dp"
+                        android:textSize="14sp" />
+
+                    <!-- keterangan -->
+                    <TextView
+                        android:id="@+id/tvUcodeLokasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lokasi"
+                        android:textSize="16sp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="8dp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerUCode_Lokasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_round_bg_outline"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="10dp"
+                        android:textSize="14sp" />
+
+                    <!-- keterangan -->
+                    <TextView
+                        android:id="@+id/tvKeterangan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Keterangan (Opsional)"
+                        android:textSize="16sp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="8dp" />
+
+                    <EditText
+                        android:id="@+id/etKeterangan"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/edit_text_round_bg_outline"
+                        android:inputType="textMultiLine"
+                        android:maxLength="100"
+                        android:padding="10dp"
+                        android:gravity="top|start"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/btn_rounded_primary"
+                        android:text="Submit"
+                        android:textColor="#FFFFFF"
+                        android:tint="@null"
+                        app:tint="@null" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnCancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/btn_rounded_orange"
+                        android:text="Cancel"
+                        android:textColor="#FFFFFF"
+                        android:tint="@null"
+                        app:tint="@null" />
+
+<!--                    <ProgressBar-->
+<!--                        android:id="@+id/progressBar"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerInParent="true"-->
+<!--                        android:visibility="gone"/>-->
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+    <!-- Sidebar -->
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="false"
+        android:paddingTop="@dimen/spacing_large"
+        app:itemBackground="@color/transparent"
+        app:itemIconTint="@color/navigation_icon_state_list_color_light"
+        app:itemTextAppearance="@style/TextAppearance.Subhead.Bold"
+        app:itemTextColor="@color/navigation_text_state_list_color_light"
+        app:menu="@menu/menu_detail_warehouse" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/soejasch"
+                tools:ignore="UseAppTint" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_xlarge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/blue_grey_500"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/textUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:inputType="textEmailAddress"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/blue_grey_300"
+                android:theme="@style/EditText.Grey" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_mlarge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/blue_grey_500"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:inputType="textPassword"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="@color/blue_grey_300"
+                android:theme="@style/EditText.Grey" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_large" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="-4dp"
+                android:background="@drawable/btn_rounded_primary"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_medium" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

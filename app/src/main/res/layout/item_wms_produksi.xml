@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/RippleStyleBlack"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="txtNewsHeading"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        tools:layout_editor_absoluteX="3dp" />
+
+                    <TextView
+                        android:id="@+id/labeling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="3dp"
+                        android:background="@drawable/badge_warning"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="0 KG"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:ignore="MissingConstraints" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/labeling2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="3dp"
+                        android:background="@drawable/badge_success"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="0 KG"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/txtSubtitle"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView"
+                        android:textSize="12sp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp">
+
+                    <TextView
+                        android:id="@+id/textTanggal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:text="2024-12-12"
+                        android:textColor="@color/blue_grey_800"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtTujuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView"
+                        android:textColor="@color/deep_orange_500"
+                        android:textSize="10sp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nomor OP"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="Status"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_400" />
+
+    </androidx.cardview.widget.CardView>
+
+</com.balysv.materialripple.MaterialRippleLayout>

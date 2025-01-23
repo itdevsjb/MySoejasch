@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- State pressed (when the item is clicked) -->
+    <item android:state_pressed="true" android:drawable="@color/grey_200" />
+
+    <!-- State focused (when the item has focus) -->
+    <item android:state_focused="true" android:drawable="@color/grey_100" />
+
+    <!-- Default state (when the item is not pressed or focused) -->
+    <item android:drawable="@android:color/white" />
+
+</selector>

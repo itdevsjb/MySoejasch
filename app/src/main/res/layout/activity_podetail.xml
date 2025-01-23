@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetStartWithNavigation="0dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="@dimen/spacing_large"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/grey_40">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/EdSupplier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:hint="Supplier"
+                    android:text="test"
+                    android:textSize="13sp"
+                    android:theme="@style/EditText.Yellow" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/grey_40">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/EdTanggal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:hint="Tanggal"
+                    android:text="test"
+                    android:textSize="13sp"
+                    android:theme="@style/EditText.Yellow" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/grey_40">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/EdRequestor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:hint="Requestor"
+                    android:text="test"
+                    android:textSize="13sp"
+                    android:theme="@style/EditText.Yellow" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/txt_area_dark_yellow"
+                android:padding="5dp"
+                android:textColorHint="@color/grey_40">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/EdRemarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:gravity="top"
+                    android:hint="Description"
+                    android:inputType="textMultiLine"
+                    android:maxLines="6"
+                    android:minLines="3"
+                    android:text="test"
+                    android:textSize="13sp"
+                    android:theme="@style/EditText.Yellow" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DETAIL"
+                android:textColor="@color/blue_900"
+                android:textSize="13sp" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_400"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView4a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="Grand Total"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/textView5a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        tools:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView4b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="Pajak"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/textView5b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        tools:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView4c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="Grand Total Net"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView5c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        tools:layout_weight="1" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view9"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_middle" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edit_text_round_bg_outline">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/approvaloke"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/txt_area_dark_yellow"
+                android:padding="5dp"
+                android:textColorHint="@color/grey_40">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/EdRemarksUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:gravity="top"
+                    android:hint="Remark"
+                    android:inputType="textMultiLine"
+                    android:maxLines="6"
+                    android:minLines="6"
+                    android:textSize="13sp"
+                    android:theme="@style/EditText.Yellow" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <Button
+                android:id="@+id/lampiran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_rounded_green"
+                android:text="Lampiran"
+                android:textColor="@color/white" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Teruskan Ke BoD" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_rounded_primary"
+                android:text="SUBMIT"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

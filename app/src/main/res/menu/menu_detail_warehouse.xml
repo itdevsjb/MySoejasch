@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/grp_1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_apps"
+            android:title="Warehouse" />
+
+    </group>
+    <group
+        android:id="@+id/grp_2"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_plan"
+            android:icon="@drawable/ic_event"
+            android:title="Plan Production" />
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/ic_class"
+            android:title="Data Location" />
+
+        <item
+            android:id="@+id/nav_pallet"
+            android:icon="@drawable/ic_amp_stories"
+            android:title="Pallet Data" />
+
+        <item
+            android:id="@+id/nav_barang"
+            android:icon="@drawable/ic_assignment"
+            android:title="Data Barang" />
+
+        <item
+            android:id="@+id/nav_outbound"
+            android:icon="@drawable/ic_arrow_circle_down"
+            android:rotation = "180"
+            android:title="Stock Keluar" />
+        <item
+            android:id="@+id/nav_inbound"
+            android:icon="@drawable/ic_arrow_circle_down"
+            android:title="Stock Masuk" />
+
+        <item
+            android:id="@+id/nav_mutasi"
+            android:icon="@drawable/ic_repeat"
+            android:title="Mutasi" />
+
+        <item
+            android:id="@+id/nav_kartustok"
+            android:icon="@drawable/ic_inbox"
+            android:title="Kartu Stok" />
+
+
+
+    </group>
+
+</menu>

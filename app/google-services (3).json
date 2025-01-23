@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1001728968027",
+    "project_id": "soejasch-app",
+    "storage_bucket": "soejasch-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001728968027:android:7822b6458a9048fb37467e",
+        "android_client_info": {
+          "package_name": "com.tpsmedia.mysoejasch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdqcKq5fq0lHoWj9Pkt9KTKwIQm2jM_zc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001728968027:android:2cebae4b621763de37467e",
+        "android_client_info": {
+          "package_name": "com.tpsmedia.soejaschapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdqcKq5fq0lHoWj9Pkt9KTKwIQm2jM_zc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,5 @@
+rootProject.name = "MySoejasch"
+include ':app'
+include ':MaterialXUIDesign'
+include ':AppManager'
+include ':escposprinter'
