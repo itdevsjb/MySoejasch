@@ -21,6 +21,7 @@ import com.tpsmedia.mysoejasch.model.Divisi.Divisirequest;
 import com.tpsmedia.mysoejasch.model.Gudang.Gudangrequest;
 import com.tpsmedia.mysoejasch.model.Lokasi.Lokasirequest;
 import com.tpsmedia.mysoejasch.model.Notifikasidetail.Notifikasidetail;
+import com.tpsmedia.mysoejasch.model.Pallet.Palletrequest;
 import com.tpsmedia.mysoejasch.model.Purchaseorder.Datum;
 import com.tpsmedia.mysoejasch.model.Purchaseorderdetail.Purchaseorderdetail;
 import com.tpsmedia.mysoejasch.model.Purchaserequest.Purchaserequest;
@@ -157,6 +158,9 @@ public interface Interface {
 
     @POST("mlokasiarr")
     Call<Lokasirequest> postLokasiArr(@Header("Authorization") String Authorization, @Query("ucodeuser") String ucodeuser, @Query("ucode_gdg") String ucode_gdg );
+
+    @POST("mpalletarr")
+    Call<Palletrequest> postPalletArr(@Header("Authorization") String Authorization, @Query("ucodeuser") String ucodeuser, @Query("ucode_lokasi") String ucode_lokasi );
 
     @POST("mlokasiarr")
     Call<Lokasirequest> postLokasiArr2(@Header("Authorization") String Authorization, @Query("ucodeuser") String ucodeuser, @Query("nama_gdg") String nama_gdg );

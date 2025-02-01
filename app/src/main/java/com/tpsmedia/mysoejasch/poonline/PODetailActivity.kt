@@ -155,7 +155,7 @@ class PODetailActivity : AppCompatActivity() {
 
         binding.button2.setOnClickListener(View.OnClickListener {
             val servicesinkron = SinkronasiData(this);
-            val service = Client.getClient().create(
+            val service = Client.getClient(this).create(
                 Sinkronasi::class.java
             )
             val allBarang = dbHelper.getBarangCheckSPB(applicationContext, UcodeSPB);
@@ -348,7 +348,7 @@ class PODetailActivity : AppCompatActivity() {
 
     private fun downloadData(){
         val serviceLogin = ServiceLogin(this)
-        val service = Client.getClient().create(
+        val service = Client.getClient(this).create(
             Sinkronasi::class.java
         )
         val UcodeSPB = intent.getStringExtra("UcodeSPB");

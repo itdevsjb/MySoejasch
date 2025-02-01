@@ -30,7 +30,7 @@ public class RefreshData extends Service{
         handler = new Handler();
         dbHelper = new SQLiteHelper(this);
         ServiceLogin serviceLogin = new ServiceLogin(this);
-        Sinkronasi service = Client.getClient().create(Sinkronasi.class);
+        Sinkronasi service = Client.getClient(this).create(Sinkronasi.class);
         Log.d("MyService", "Service Created");
 
         runnable = new Runnable() {

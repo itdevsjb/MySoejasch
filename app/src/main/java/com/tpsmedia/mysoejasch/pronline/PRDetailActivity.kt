@@ -130,7 +130,7 @@ class PRDetailActivity : AppCompatActivity() {
 
         binding.button2.setOnClickListener(View.OnClickListener {
             val servicesinkron = SinkronasiData(this);
-            val service = Client.getClient().create(
+            val service = Client.getClient(this).create(
                 Sinkronasi::class.java
             )
             val allBarang = dbHelper.getBarangCheckPPB(applicationContext, UcodePPB);
@@ -268,7 +268,7 @@ class PRDetailActivity : AppCompatActivity() {
 
     private fun downloadData(){
         val serviceLogin = ServiceLogin(this)
-        val service = Client.getClient().create(
+        val service = Client.getClient(this).create(
             Sinkronasi::class.java
         )
         val UcodePPB = intent.getStringExtra("UcodePPB");

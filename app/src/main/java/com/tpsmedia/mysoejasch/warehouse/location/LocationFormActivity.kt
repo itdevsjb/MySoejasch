@@ -147,7 +147,7 @@ class LocationFormActivity : AppCompatActivity() {
     private fun fetchSpinnerData() {
 
         val serviceLogin = ServiceLogin(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Interface::class.java
         )
         val call = service2.postGudangArr("Bearer "+ serviceLogin.token, serviceLogin.loginId)
@@ -210,7 +210,7 @@ class LocationFormActivity : AppCompatActivity() {
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = ClientWMS.getClientWMS().create(
+        val service2 = ClientWMS.getClientWMS(this).create(
             Sinkronasi::class.java
         )
 

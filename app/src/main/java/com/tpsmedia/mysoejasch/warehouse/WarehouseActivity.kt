@@ -26,6 +26,7 @@ import com.tpsmedia.mysoejasch.warehouse.stokbarang.StokBarangActivity
 import com.tpsmedia.mysoejasch.warehouse.stokkeluar.StokKeluarActivity
 import com.tpsmedia.mysoejasch.warehouse.stokmasuk.StokMasukActivity
 import com.tpsmedia.mysoejasch.warehouse.stokmutasi.StokMutasiActivity
+import com.tpsmedia.mysoejasch.warehouse.stokopname.StokOpnameActivity
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import java.text.SimpleDateFormat
@@ -143,7 +144,9 @@ class WarehouseActivity : AppCompatActivity() {
         Toast.makeText(this, "Akan dirilis setelah stok lama habis", Toast.LENGTH_SHORT).show()
     }
 
-
+    fun showOnOpname(view: View?) {
+        startActivity(Intent(applicationContext, StokOpnameActivity::class.java))
+    }
 
     fun showOnKartuStok(view: View?) {
         startActivity(Intent(applicationContext, KartuStockActivity::class.java))

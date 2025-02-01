@@ -79,7 +79,7 @@ class StokMutasiDetailActivity : AppCompatActivity(){
         isLoading = true
         val ucode_mutasi = intent.getStringExtra("ucode_mutasi")
         val serviceLogin = ServiceLogin(this)
-        val service2 = ClientWMS.getClientWMS().create(Sinkronasi::class.java)
+        val service2 = ClientWMS.getClientWMS(this).create(Sinkronasi::class.java)
         val call = service2.getDetailMutasi(
             "Bearer " + serviceLogin.token,
             ucode_mutasi,

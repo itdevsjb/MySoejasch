@@ -39,7 +39,7 @@ class HistoryPRActivity : AppCompatActivity() {
         val no_approval_2 = intent.getStringExtra("no_approval_2");
         val no_approval_3 = intent.getStringExtra("no_approval_3");
 
-        val service = Client.getClient().create(
+        val service = Client.getClient(this).create(
             Sinkronasi::class.java
         )
 

@@ -122,7 +122,7 @@ class StokKeluarDetailActivity : AppCompatActivity(){
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = ClientWMS.getClientWMS().create(
+        val service2 = ClientWMS.getClientWMS(this).create(
             Sinkronasi::class.java
         )
 
@@ -161,7 +161,7 @@ class StokKeluarDetailActivity : AppCompatActivity(){
     private fun cekQr(kodeqr: String) {
 
         val serviceLogin = ServiceLogin(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Sinkronasi::class.java
         )
 
@@ -213,7 +213,7 @@ class StokKeluarDetailActivity : AppCompatActivity(){
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = ClientWMS.getClientWMS().create(
+        val service2 = ClientWMS.getClientWMS(this).create(
             Sinkronasi::class.java
         )
 
@@ -291,7 +291,7 @@ class StokKeluarDetailActivity : AppCompatActivity(){
         isLoading = true
         val ucode_outbound = intent.getStringExtra("ucode_outbound")
         val serviceLogin = ServiceLogin(this)
-        val service2 = ClientWMS.getClientWMS().create(Sinkronasi::class.java)
+        val service2 = ClientWMS.getClientWMS(this).create(Sinkronasi::class.java)
         val call = service2.getDetailOutbound(
             "Bearer " + serviceLogin.token,
             ucode_outbound,

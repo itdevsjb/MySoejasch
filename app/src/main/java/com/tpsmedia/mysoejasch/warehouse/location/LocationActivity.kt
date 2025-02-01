@@ -188,7 +188,7 @@ class LocationActivity : AppCompatActivity() {
         binding.swipeRefresh.isRefreshing = true
 
         val serviceLogin = ServiceLogin(this)
-        val service2 = ClientWMS.getClientWMS().create(
+        val service2 = ClientWMS.getClientWMS(this).create(
             Sinkronasi::class.java
         )
         val call = service2.getLocation("Bearer "+ serviceLogin.token, currentPage.toString(), limit.toString(), searchKeyword)

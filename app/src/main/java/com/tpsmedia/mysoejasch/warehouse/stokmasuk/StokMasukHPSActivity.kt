@@ -78,7 +78,7 @@ class StokMasukHPSActivity : AppCompatActivity(){
         isLoading = true
         val ucode_inbound = intent.getStringExtra("ucode_inbound")
         val serviceLogin = ServiceLogin(this)
-        val service2 = ClientWMS.getClientWMS().create(Sinkronasi::class.java)
+        val service2 = ClientWMS.getClientWMS(this).create(Sinkronasi::class.java)
         val call = service2.getDetailInbound(
             "Bearer " + serviceLogin.token,
             ucode_inbound,

@@ -28,7 +28,7 @@ public class SinkronasiData {
     public boolean sinkronPPB(Context context){
         dbHelper = new SQLiteHelper(context);
         ServiceLogin serviceLogin = new ServiceLogin(context);
-        Sinkronasi service = Client.getClient().create(Sinkronasi.class);
+        Sinkronasi service = Client.getClient(context).create(Sinkronasi.class);
 
         Call<Purchaserequest> call = service.postpronlinecepat("Bearer "+ serviceLogin.getToken());
         call.enqueue(new Callback<Purchaserequest>() {
@@ -57,7 +57,7 @@ public class SinkronasiData {
     public boolean sinkronSPB(Context context){
         dbHelper = new SQLiteHelper(context);
         ServiceLogin serviceLogin = new ServiceLogin(context);
-        Sinkronasi service = Client.getClient().create(Sinkronasi.class);
+        Sinkronasi service = Client.getClient(context).create(Sinkronasi.class);
 
         Call<Purchaseorder> call2 = service.postpoonlinecepat("Bearer "+ serviceLogin.getToken());
         call2.enqueue(new Callback<Purchaseorder>() {
@@ -103,7 +103,7 @@ public class SinkronasiData {
     public boolean sinkronSPBSingle(Context context, String id){
         dbHelper = new SQLiteHelper(context);
         ServiceLogin serviceLogin = new ServiceLogin(context);
-        Sinkronasi service = Client.getClient().create(Sinkronasi.class);
+        Sinkronasi service = Client.getClient(context).create(Sinkronasi.class);
         Call<Purchaseorder> call2 = service.postpoonlinesingle("Bearer "+ serviceLogin.getToken(), id);
         call2.enqueue(new Callback<Purchaseorder>() {
             @Override
@@ -128,7 +128,7 @@ public class SinkronasiData {
     public boolean sinkronSPJSingle(Context context, String id){
         dbHelper = new SQLiteHelper(context);
         ServiceLogin serviceLogin = new ServiceLogin(context);
-        Sinkronasi service = Client.getClient().create(Sinkronasi.class);
+        Sinkronasi service = Client.getClient(context).create(Sinkronasi.class);
         Call<Purchaseorder> call2 = service.postpoonlinesinglejasa("Bearer "+ serviceLogin.getToken(), id);
         call2.enqueue(new Callback<Purchaseorder>() {
             @Override
@@ -153,7 +153,7 @@ public class SinkronasiData {
     public boolean sinkronPPBSingle(Context context, String id){
         dbHelper = new SQLiteHelper(context);
         ServiceLogin serviceLogin = new ServiceLogin(context);
-        Sinkronasi service = Client.getClient().create(Sinkronasi.class);
+        Sinkronasi service = Client.getClient(context).create(Sinkronasi.class);
 
         Call<Purchaserequest> call2 = service.postpronlinesingle("Bearer "+ serviceLogin.getToken(), id);
         call2.enqueue(new Callback<Purchaserequest>() {
@@ -181,7 +181,7 @@ public class SinkronasiData {
     public boolean sinkronEmployee(Context context){
         dbHelper = new SQLiteHelper(context);
         ServiceLogin serviceLogin = new ServiceLogin(context);
-        Sinkronasi service = Client.getClient().create(Sinkronasi.class);
+        Sinkronasi service = Client.getClient(context).create(Sinkronasi.class);
 
         Call<EmployeeList> call = service.postEmployee("Bearer "+ serviceLogin.getToken());
         call.enqueue(new Callback<EmployeeList>() {
@@ -213,7 +213,7 @@ public class SinkronasiData {
     public boolean sinkronPallet(Context context){
         dbHelper = new SQLiteHelper(context);
         ServiceLogin serviceLogin = new ServiceLogin(context);
-        Sinkronasi service = Client.getClient().create(Sinkronasi.class);
+        Sinkronasi service = Client.getClient(context).create(Sinkronasi.class);
 
         Call<PalletList> call = service.postPallet("Bearer "+ serviceLogin.getToken());
         call.enqueue(new Callback<PalletList>() {

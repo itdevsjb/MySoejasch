@@ -111,7 +111,7 @@ class KartuStockActivity : AppCompatActivity() {
     fun getData(){
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service = Client.getClient().create(
+        val service = Client.getClient(this).create(
             Sinkronasi::class.java
         )
         val searchKeyword = binding.editTextText.text;

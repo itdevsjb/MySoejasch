@@ -201,7 +201,7 @@ class StokMutasiActivity : AppCompatActivity() {
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = ClientWMS.getClientWMS().create(
+        val service2 = ClientWMS.getClientWMS(this).create(
             Sinkronasi::class.java
         )
 

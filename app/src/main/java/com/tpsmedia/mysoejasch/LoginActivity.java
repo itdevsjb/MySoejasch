@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         ed1 = (EditText)findViewById(R.id.textUsername);
         ed2 = (EditText)findViewById(R.id.textPassword);
 
-        mApiInterface = Client.getClient().create(Interface.class);
+        mApiInterface = Client.getClient(this).create(Interface.class);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

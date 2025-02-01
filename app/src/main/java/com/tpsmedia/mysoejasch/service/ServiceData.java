@@ -18,6 +18,7 @@ public class ServiceData {
 
     private  String ucode_gdg;
     private  String ucode_lokasi;
+    private  String ucode_pallet;
     private  String ucode_div_tujuan;
 
     private  String factory_pilihan;
@@ -43,6 +44,7 @@ public class ServiceData {
 
         ucode_gdg = myPrefs.getString("ucode_gdg", "");
         ucode_lokasi = myPrefs.getString("ucode_lokasi", "");
+        ucode_pallet = myPrefs.getString("ucode_pallet", "");
 
         ucode_div_tujuan = myPrefs.getString("ucode_div_tujuan", "");
 
@@ -69,8 +71,8 @@ public class ServiceData {
     public String getSelect_type() { return select_type; }
 
     public String getUcode_gdg() { return ucode_gdg; }
-
     public String getUcode_lokasi() { return ucode_lokasi; }
+    public String getUcode_pallet() { return ucode_pallet; }
 
     public String getUcode_div_tujuan() { return ucode_div_tujuan; }
 

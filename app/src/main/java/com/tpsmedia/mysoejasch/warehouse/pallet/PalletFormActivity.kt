@@ -126,7 +126,7 @@ class PalletFormActivity : AppCompatActivity() {
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = ClientWMS.getClientWMS().create(
+        val service2 = ClientWMS.getClientWMS(this).create(
             Sinkronasi::class.java
         )
 
@@ -188,7 +188,7 @@ class PalletFormActivity : AppCompatActivity() {
 
     private fun fetchSpinnerData() {
         val serviceLogin = ServiceLogin(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Interface::class.java
         )
         val call = service2.postGudangArr("Bearer "+ serviceLogin.token, serviceLogin.loginId)
@@ -244,7 +244,7 @@ class PalletFormActivity : AppCompatActivity() {
 
     private fun fetchSpinnerDataLokasi(ucode_gdg: String) {
         val serviceLogin = ServiceLogin(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Interface::class.java
         )
         val call = service2.postLokasiArr("Bearer "+ serviceLogin.token, serviceLogin.loginId, ucode_gdg)
@@ -298,7 +298,7 @@ class PalletFormActivity : AppCompatActivity() {
 
     private fun fetchSpinnerTujuan() {
         val serviceLogin = ServiceLogin(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Interface::class.java
         )
         val call = service2.postDivisiArr("Bearer "+ serviceLogin.token, serviceLogin.loginId)

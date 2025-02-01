@@ -1,2 +1,45 @@
-package com.tpsmedia.mysoejasch.model.Pallet;public class Palletrequest {
+package com.tpsmedia.mysoejasch.model.Pallet;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+import com.tpsmedia.mysoejasch.model.Pallet.Datum;
+import com.tpsmedia.mysoejasch.model.Pallet.Success;
+
+import java.util.List;
+
+public class Palletrequest {
+
+
+    @SerializedName("success")
+    @Expose
+    private com.tpsmedia.mysoejasch.model.Pallet.Success success;
+
+    @SerializedName("data")
+    @Expose
+    private List<com.tpsmedia.mysoejasch.model.Pallet.Datum> data = null;
+
+    private List<String> choices;
+
+    public List<String> getChoices() {
+        return choices;
+    }
+
+    public void setChoices(List<String> choices) {
+        this.choices = choices;
+    }
+
+
+    public List<Datum> getData() {
+        return data;
+    }
+
+
+    public com.tpsmedia.mysoejasch.model.Pallet.Success getSuccess() {
+        return success;
+    }
+
+    public void setSuccess(Success success) {
+        this.success = success;
+    }
+
 }

@@ -99,7 +99,7 @@ class StokMasukActivity : AppCompatActivity()  {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
                 if (!isLoading && isLastItemVisible()) {
-                    loadData()
+//                    loadData()
                 }
             }
         })
@@ -108,6 +108,7 @@ class StokMasukActivity : AppCompatActivity()  {
             searchKeyword = ""
             currentPage = 1
             adapter.clearData()
+            loadData()
         }
 
         loadData()
@@ -247,7 +248,7 @@ class StokMasukActivity : AppCompatActivity()  {
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = ClientWMS.getClientWMS().create(
+        val service2 = ClientWMS.getClientWMS(this).create(
             Sinkronasi::class.java
         )
         val call = service2.getInbound("Bearer "+ serviceLogin.token, currentPage.toString(), limit.toString(), serviceData.start_date ,serviceData.end_date, searchKeyword)
@@ -339,7 +340,7 @@ class StokMasukActivity : AppCompatActivity()  {
     private fun cekHPS() {
 
         val serviceLogin = ServiceLogin(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Interface::class.java
         )
         val call = service2.postGudangArr("Bearer "+ serviceLogin.token,  serviceLogin.loginId)
@@ -397,7 +398,7 @@ class StokMasukActivity : AppCompatActivity()  {
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Interface::class.java
         )
 
@@ -441,7 +442,7 @@ class StokMasukActivity : AppCompatActivity()  {
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Sinkronasi::class.java
         )
 
@@ -509,7 +510,7 @@ class StokMasukActivity : AppCompatActivity()  {
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = ClientWMS.getClientWMS().create(
+        val service2 = ClientWMS.getClientWMS(this).create(
             Sinkronasi::class.java
         )
 

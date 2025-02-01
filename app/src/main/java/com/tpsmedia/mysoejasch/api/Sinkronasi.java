@@ -2,6 +2,7 @@ package com.tpsmedia.mysoejasch.api;
 
 import com.tpsmedia.mysoejasch.model.ApiResponse;
 import com.tpsmedia.mysoejasch.model.Approval.ApprovalList;
+import com.tpsmedia.mysoejasch.model.CTPlanData.Success;
 import com.tpsmedia.mysoejasch.model.Employee.EmployeeList;
 import com.tpsmedia.mysoejasch.model.GetReponseSuccess;
 import com.tpsmedia.mysoejasch.model.Purchaseorder.Purchaseorder;
@@ -23,6 +24,8 @@ import com.tpsmedia.mysoejasch.model.Warehouse.StokMasuk.StokMasukObject;
 import com.tpsmedia.mysoejasch.model.Warehouse.StokMasukDetail.StokMasukDetail;
 import com.tpsmedia.mysoejasch.model.Warehouse.StokMutasi.StokMutasi;
 import com.tpsmedia.mysoejasch.model.Warehouse.StokMutasiDetail.StokMutasiDetail;
+import com.tpsmedia.mysoejasch.model.Warehouse.StokOpname.StokOpname;
+import com.tpsmedia.mysoejasch.model.Warehouse.StokOpnameDetail.StokOpnameDetail;
 import com.tpsmedia.mysoejasch.requestform.RequestLocation;
 
 import java.util.List;
@@ -148,8 +151,31 @@ public interface Sinkronasi {
     @GET("mobile/inbound")
     Call<StokMasuk> getInbound(@Header("Authorization") String Authorization, @Query("page") String page, @Query("per_page") String per_page, @Query("start_date") String start_date, @Query("end_date") String end_date, @Query("search") String search  );
 
+
+    @GET("opname")
+    Call<StokOpname> getOpname(@Header("Authorization") String Authorization, @Query("page") String page, @Query("per_page") String per_page, @Query("start_date") String start_date, @Query("end_date") String end_date, @Query("search") String search  );
+
+
     @GET("mobile/inbound/{id}")
     Call<StokMasuk> getInboundId(@Header("Authorization") String Authorization, @Path(value = "id", encoded = true) String id);
+
+    @GET("opname-detail/{id}")
+    Call<StokOpname> getOpnameId(@Header("Authorization") String Authorization, @Path(value = "id", encoded = true) String id);
+
+    @GET("opname-detail-brg/{id}")
+    Call<StokOpnameDetail> getOpnameDetailId(@Header("Authorization") String Authorization, @Path(value = "id", encoded = true) String id);
+
+    @POST("opname-post/{id}")
+    Call<StokOpname> postOpnameDetail(
+            @Header("Authorization") String authorization,
+            @Path(value = "id", encoded = true) String id,
+            @Body RequestBody requestData
+    );
+
+    @FormUrlEncoded
+    @POST("cekopnamedetailterscan")
+    Call<Success> cekOpnameTerscan(@Header("Authorization") String Authorization, @Field("ucode_opname") String ucode_opname, @Field("qr_value") String qr_value);
+
 
 
     @GET("mobile/outbound")
@@ -215,6 +241,14 @@ public interface Sinkronasi {
             @Header("Authorization") String authorization,
             @Body RequestBody requestData
     );
+
+    @POST("postHeadOpnameBaru")
+    Call<StokOpname> postHeadOpnameBaru(
+            @Header("Authorization") String authorization,
+            @Body RequestBody requestData
+    );
+
+
 
     @POST("mobile/inbound")
     Call<StokMasukObject> postInbound2(

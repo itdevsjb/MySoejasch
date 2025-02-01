@@ -147,6 +147,18 @@
             android:exported="false" />
 
         <activity
+            android:name=".warehouse.stokopname.StokOpnameActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".warehouse.stokopname.StokOpnameFormActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".warehouse.stokopname.StokOpnameDetailActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".warehouse.stokkeluar.StokKeluarActivity"
             android:exported="false" />
 

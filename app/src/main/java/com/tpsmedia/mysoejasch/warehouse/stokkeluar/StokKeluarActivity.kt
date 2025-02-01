@@ -257,7 +257,7 @@ class StokKeluarActivity : AppCompatActivity() {
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = ClientWMS.getClientWMS().create(
+        val service2 = ClientWMS.getClientWMS(this).create(
             Sinkronasi::class.java
         )
 
@@ -380,7 +380,7 @@ class StokKeluarActivity : AppCompatActivity() {
 
     fun cekCTplan(ctplan: String) {
         val serviceLogin = ServiceLogin(this)
-        val service2 = Client.getClient().create(Sinkronasi::class.java)
+        val service2 = Client.getClient(this).create(Sinkronasi::class.java)
             val call = service2.getSlugCT("Bearer " + serviceLogin.token, "CEKCTPLAN", ctplan)
             call.enqueue(object : Callback<CTPlan> {
                 override fun onResponse(call: Call<CTPlan>, response: Response<CTPlan>) {
@@ -439,7 +439,7 @@ class StokKeluarActivity : AppCompatActivity() {
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = ClientWMS.getClientWMS().create(
+        val service2 = ClientWMS.getClientWMS(this).create(
             Sinkronasi::class.java
         )
 

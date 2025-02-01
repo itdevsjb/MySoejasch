@@ -239,7 +239,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void sinkronasiDatabase(Context context){
         ServiceLogin serviceLogin = new ServiceLogin(this);
-        Sinkronasi service = Client.getClient().create(Sinkronasi.class);
+        Sinkronasi service = Client.getClient(this).create(Sinkronasi.class);
         Call<Purchaserequest> call = service.postpronline("Bearer "+ serviceLogin.getToken());
         call.enqueue(new Callback<Purchaserequest>() {
             @Override
@@ -326,7 +326,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkForUpdates() {
         ServiceLogin serviceLogin = new ServiceLogin(this);
-        Sinkronasi service = Client.getClient().create(Sinkronasi.class);
+        Sinkronasi service = Client.getClient(this).create(Sinkronasi.class);
         Call<VersionResponse> call = service.postversion("Bearer "+ serviceLogin.getToken());
         call.enqueue(new Callback<VersionResponse>() {
             @Override
@@ -512,7 +512,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 doubleBackToExitPressedOnce = false;
             }
-        }, 2000); // Menunggu 2 detik untuk reset status
+        }, 1000); // Menunggu 2 detik untuk reset status
     }
 
 }

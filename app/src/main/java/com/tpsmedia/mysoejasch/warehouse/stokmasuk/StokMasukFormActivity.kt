@@ -134,7 +134,7 @@ class StokMasukFormActivity : AppCompatActivity() {
 
     private fun fetchSpinnerData() {
         val serviceLogin = ServiceLogin(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Interface::class.java
         )
         val call = service2.postGudangArr("Bearer "+ serviceLogin.token, serviceLogin.loginId)
@@ -190,7 +190,7 @@ class StokMasukFormActivity : AppCompatActivity() {
 
     private fun fetchSpinnerDataLokasi(ucode_gdg: String) {
         val serviceLogin = ServiceLogin(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Interface::class.java
         )
         val call = service2.postLokasiArr("Bearer "+ serviceLogin.token, serviceLogin.loginId, ucode_gdg)
@@ -244,7 +244,7 @@ class StokMasukFormActivity : AppCompatActivity() {
 
 //    private fun fetchSpinnerDivisiTujuan() {
 //        val serviceLogin = ServiceLogin(this)
-//        val service2 = Client.getClient().create(
+//        val service2 = Client.getClient(this).create(
 //            Interface::class.java
 //        )
 //        val call = service2.postDivisiArr("Bearer "+ serviceLogin.token, serviceLogin.loginId)
@@ -301,7 +301,7 @@ class StokMasukFormActivity : AppCompatActivity() {
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = ClientWMS.getClientWMS().create(
+        val service2 = ClientWMS.getClientWMS(this).create(
             Sinkronasi::class.java
         )
 

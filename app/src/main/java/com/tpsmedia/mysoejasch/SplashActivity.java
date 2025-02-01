@@ -126,7 +126,7 @@ public class SplashActivity extends AppCompatActivity {
     private void sinkronasiDatabase(){
         Context context = null;
         ServiceLogin serviceLogin = new ServiceLogin(this);
-        Sinkronasi service = Client.getClient().create(Sinkronasi.class);
+        Sinkronasi service = Client.getClient(this).create(Sinkronasi.class);
 
         Call<Purchaserequest> call = service.postpronline("Bearer "+ serviceLogin.getToken());
         call.enqueue(new Callback<Purchaserequest>() {
@@ -211,7 +211,7 @@ public class SplashActivity extends AppCompatActivity {
     private void sinkronasiDatabaseCepat(){
         Context context = null;
         ServiceLogin serviceLogin = new ServiceLogin(this);
-        Sinkronasi service = Client.getClient().create(Sinkronasi.class);
+        Sinkronasi service = Client.getClient(this).create(Sinkronasi.class);
 
         Call<Purchaserequest> call = service.postpronlinecepat("Bearer "+ serviceLogin.getToken());
         call.enqueue(new Callback<Purchaserequest>() {

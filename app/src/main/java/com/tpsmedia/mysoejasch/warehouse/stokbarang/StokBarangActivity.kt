@@ -179,7 +179,7 @@ class StokBarangActivity : AppCompatActivity() {
     private fun cekHPS() {
 
         val serviceLogin = ServiceLogin(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Interface::class.java
         )
         val call = service2.postGudangArr("Bearer "+ serviceLogin.token,  serviceLogin.loginId)
@@ -222,7 +222,7 @@ class StokBarangActivity : AppCompatActivity() {
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Interface::class.java
         )
 
@@ -310,7 +310,7 @@ class StokBarangActivity : AppCompatActivity() {
     private fun getData(){
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service = Client.getClient().create(
+        val service = Client.getClient(this).create(
             Sinkronasi::class.java
         )
         val call = service.getStok("Bearer " + serviceLogin.token, "bn", serviceData.lokasi_pilihan, searchKeyword)

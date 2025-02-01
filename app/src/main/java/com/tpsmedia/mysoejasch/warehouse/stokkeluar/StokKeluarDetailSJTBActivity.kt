@@ -38,6 +38,7 @@ import com.tpsmedia.mysoejasch.model.Warehouse.StokMasuk.StokMasuk
 import com.tpsmedia.mysoejasch.pronline.PROnlineActivity
 import com.tpsmedia.mysoejasch.service.ServiceData
 import com.tpsmedia.mysoejasch.service.ServiceLogin
+import com.tpsmedia.mysoejasch.warehouse.WarehouseActivity
 import com.tpsmedia.mysoejasch.warehouse.stokmasuk.StokMasukFormActivity
 import okhttp3.MediaType
 import okhttp3.RequestBody
@@ -149,7 +150,7 @@ class StokKeluarDetailSJTBActivity : AppCompatActivity(){
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Interface::class.java
         )
 
@@ -193,7 +194,7 @@ class StokKeluarDetailSJTBActivity : AppCompatActivity(){
 
     private fun cekDataTerpenuhi(ucode_ct: String, no_ct: String) {
         val serviceLogin = ServiceLogin(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Interface::class.java
         )
         val call = service2.cekDataTerpenuhi("Bearer "+ serviceLogin.token, ucode_ct)
@@ -222,7 +223,7 @@ class StokKeluarDetailSJTBActivity : AppCompatActivity(){
 
     private fun cekStokACTS(ucode_ct: String, no_ct: String) {
         val serviceLogin = ServiceLogin(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Interface::class.java
         )
         val call = service2.cekDataStokACTS("Bearer "+ serviceLogin.token, ucode_ct)
@@ -261,7 +262,7 @@ class StokKeluarDetailSJTBActivity : AppCompatActivity(){
     private fun cekQr(kodeqr: String) {
 
         val serviceLogin = ServiceLogin(this)
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Sinkronasi::class.java
         )
 
@@ -386,7 +387,7 @@ class StokKeluarDetailSJTBActivity : AppCompatActivity(){
 
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
-        val service2 = ClientWMS.getClientWMS().create(
+        val service2 = ClientWMS.getClientWMS(this).create(
             Sinkronasi::class.java
         )
 
@@ -462,7 +463,7 @@ class StokKeluarDetailSJTBActivity : AppCompatActivity(){
         val serviceLogin = ServiceLogin(this)
         val serviceData = ServiceData(this)
         val token = serviceLogin.token;
-        val service2 = Client.getClient().create(
+        val service2 = Client.getClient(this).create(
             Interface::class.java
         )
         val call: Call<GetReponseSuccess> = service2.postSubmitSJTB(
@@ -526,6 +527,11 @@ class StokKeluarDetailSJTBActivity : AppCompatActivity(){
         return lastVisibleItemPosition >= totalItemCount - 1
     }
 
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(applicationContext, StokKeluarActivity::class.java))
+    }
 
 
 
